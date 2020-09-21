@@ -1,4 +1,5 @@
 @import "src/utils/styles/mixins";
+
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +13,6 @@
 .innerContainer{
     @include flex(center,column,center);
     @include dimensions(277px,439px);
-    /*width: 277px;
-    height: 439px;*/
     padding: 72px;
     @include border($border-radius: 8px,$border-color: #e5e5e5);
-    /*border: 1px solid #e5e5e5;
-    border-radius: 8px;*/
 }

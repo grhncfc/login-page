@@ -1,54 +1,74 @@
 @import "src/utils/styles/mixins";
+
 .default {
-  @include dimensions(241px,24px);
-  @include border(2px,8px,transparent)
+  @include dimensions(241px, 24px);
+  @include border(2px, 8px, transparent)
   padding: 16px;
   margin-bottom: 16px;
   animation-name: lightAnimation;
   animation-duration: 500ms;
   background-color: #eee;
   font-size: 16px;
+
   &:hover {
     background-color: #fff;
     border: 2px solid #ddd;
   }
+
   &:focus {
     outline: none !important;
   }
-  &:focus-within{
+
+  &:focus-within {
     border: 2px solid #ff6000;
     background-color: #fff;
   }
 }
+
 .wText {
   border: solid 2px #dddddd;
   background-color: white;
 }
+
 .defaultDark {
   @extend .default;
-  @include colors(#666,beige);
+  @include colors(#666, beige);
   animation-name: darkAnimation;
   animation-duration: 500ms;
+
   &:hover {
     background-color: #444;
     border: 2px solid #666;
   }
+
   &:focus {
     outline: none !important;
   }
-  &:focus-within{
+
+  &:focus-within {
     border: 2px solid #ff6000;
     background-color: #444;
   }
-  &::placeholder{
+
+  &::placeholder {
     color: #ddd;
   }
 }
+
 @keyframes darkAnimation {
-  0% {background-color: #eee;}
-  100% {background-color: #666;}
+  0% {
+    background-color: #eee;
+  }
+  100% {
+    background-color: #666;
+  }
 }
+
 @keyframes lightAnimation {
-  0% {background-color: #666;}
-  100% {background-color: #eee;}
+  0% {
+    background-color: #666;
+  }
+  100% {
+    background-color: #eee;
+  }
 }

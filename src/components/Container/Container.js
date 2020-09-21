@@ -1,5 +1,5 @@
 import React from 'react';
-import {useDarkTheme} from "../contexts/DarkThemeContext";
+import {useDarkTheme} from "../../contexts/DarkThemeContext";
 import styles from "./_container.module.scss";
 
 const Container = ({children}) => {

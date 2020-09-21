@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {v4 as uuidv4} from 'uuid';
 import styles from "./_switch.module.scss";
-import {useDarkTheme,useDarkThemeToggle} from "../contexts/DarkThemeContext";
+import {useDarkTheme,useDarkThemeToggle} from "../../contexts/DarkThemeContext";
 
 const Switch = ({onChange, classNameForInput, thumbClassName, ...restProps}) => {
     const darkTheme = useDarkTheme();
@@ -11,7 +11,7 @@ const Switch = ({onChange, classNameForInput, thumbClassName, ...restProps}) => 
     const randomId = uuidv4();
     useEffect(() => {
         if (onChange) {
-            onChange(node.current, isChecked, darkTheme, setDarkTheme );
+            onChange(node.current, isChecked, darkTheme, setDarkTheme);
         }
     }, [isChecked]);
 
