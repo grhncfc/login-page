@@ -1,0 +1,28 @@
+@import "src/utils/styles/mixins";
+.default {
+  @include dimensions(277px,48px);
+  @include colors(#ff6000,#fff);
+  @include flex($justify-content: center);
+  @include colors(#ff6000,#fff);
+  @include border(2px,8px,#ff6000);
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  &:focus{
+    outline: none !important;
+  }
+  &:active{
+    @include colors(#cc4d00,#fff);
+    @include border($border: 2px,$border-color: #cc4d00);
+  }
+  &:disabled{
+    @include colors(#ccc,#919191);
+    @include border($border: 2px,$border-color: #ccc);
+    cursor: not-allowed;
+  }
+}
+.loading {
+  @include position($z-index: 10,$position: absolute);
+}

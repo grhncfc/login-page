@@ -1,0 +1,6 @@
+@import "src/utils/styles/mixins";
+.imgStyle {
+    @include position($position: absolute,$left: 235px,$top: 16px);
+    overflow: hidden;
+    cursor: pointer;
+}

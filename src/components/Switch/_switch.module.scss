@@ -1,0 +1,25 @@
+@import "src/utils/styles/mixins";
+.defaultLabel {
+  @include dimensions(60px,32px);
+  @include border(2px,30px,gray);
+  @include position($position: absolute,$right: 25px,$top: 25px);
+  display: inline-block;
+  background-color: #8B0000;
+  &:after {
+    @include dimensions(25px,26px);
+    @include position($position: absolute,$left: 3px,$top: 3px);
+    content: '';
+    border-radius: 50%;
+    background-color: whitesmoke;
+    transition: all 0.5s;
+  }
+}
+.defaultInput {
+  display: none;
+}
+.defaultInput:checked + .defaultLabel::after {
+  left: 28px;
+}
+.defaultInput:checked + .defaultLabel {
+  background-color: olive;
+}

@@ -1,0 +1,4 @@
+@import "src/utils/styles/mixins";
+.default {
+  @include dimensions(277px,224px);
+}
