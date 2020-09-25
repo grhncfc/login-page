@@ -1,5 +1,4 @@
 import React,{useState,useContext} from "react";
-import userData from "../assets/user";
 
 const UserContext = React.createContext();
 
@@ -8,7 +7,7 @@ export const useUser = () => {
 };
 
 export const UserProvider = ({children}) => {
-    const [user] = useState({userData});
+    const [user, setUser] = useState("");
 
     return (
         <UserContext.Provider value={user}>

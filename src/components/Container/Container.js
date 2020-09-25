@@ -1,6 +1,4 @@
 import React from 'react';
-import {useDarkTheme} from "../../contexts/DarkThemeContext";
-import {useUser} from "../../contexts/UserContext";
 import styles from "./_container.module.scss";
 
 const Container = ({children,darkTheme}) => {

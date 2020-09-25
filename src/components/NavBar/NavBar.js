@@ -6,7 +6,7 @@ const NavBar = (props) => {
         if (props.onClick){
             props.onClick();
         }
-    }
+    };
     return (
         <div className={`${styles.container} ${props.className}`}>
             Hoşgeldin {props.user}

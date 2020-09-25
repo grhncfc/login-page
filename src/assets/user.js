@@ -15,4 +15,4 @@ const userData = [{
     password:  "armut"
 }];
 
-export default userData ;
+export default userData;

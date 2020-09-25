@@ -1,7 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {v4 as uuidv4} from 'uuid';
 import styles from "./_switch.module.scss";
-import {useDarkTheme,useDarkThemeToggle} from "../../contexts/DarkThemeContext";
+
+//make switch great again
 
 const Switch = ({darkTheme, setDarkTheme, onChange, classNameForInput, thumbClassName, ...restProps}) => {
     const [isChecked, setIsChecked] = useState(false);

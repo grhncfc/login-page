@@ -6,7 +6,9 @@ import loginImgNonVisibleDark from '../../assets/pwnon-visibleDark.svg';
 import styles from "./_visibilityImg.module.scss";
 import {useDarkTheme} from "../../contexts/DarkThemeContext";
 
-const VisibilityImg = ({visibility,onClick}) => {
+//make visibilityImg great again
+
+const VisibilityImg = ({visibility, onClick}) => {
     const darkTheme = useDarkTheme();
 
     const loginImgDark = visibility ? loginImgVisibleDark : loginImgNonVisibleDark ;
