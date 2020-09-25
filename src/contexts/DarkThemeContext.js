@@ -12,7 +12,7 @@ export const useDarkThemeToggle = () => {
 };
 
 export const DarkThemeProvider = ({children}) => {
-    const [darkTheme,setDarkTheme] = useState(true);
+    const [darkTheme,setDarkTheme] = useState(false);
 
     return (
         <DarkThemeContext.Provider value={darkTheme}>

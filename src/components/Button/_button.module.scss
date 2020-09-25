@@ -15,11 +15,11 @@
   }
   &:active{
     @include colors(#cc4d00,#fff);
-    @include border($border: 2px,$border-color: #cc4d00);
+    @include border(2px,8px,#cc4d00);
   }
   &:disabled{
     @include colors(#ccc,#919191);
-    @include border($border: 2px,$border-color: #ccc);
+    @include border(2px,8px,#ccc);
     cursor: not-allowed;
   }
 }

@@ -23,11 +23,10 @@
     border: 2px solid #ff6000;
     background-color: #fff;
   }
-}
-
-.wText {
-  border: solid 2px #dddddd;
-  background-color: white;
+  &:not(:placeholder-shown) {
+    background-color: white;
+    border: solid 2px #dddddd;
+  }
 }
 
 .defaultDark {
@@ -52,6 +51,10 @@
 
   &::placeholder {
     color: #ddd;
+  }
+  &:not(:placeholder-shown) {
+    background-color: #555;
+    border: solid 2px #454545;
   }
 }
 

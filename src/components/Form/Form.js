@@ -3,17 +3,16 @@ import styles from "./_form.module.scss";
 import {useUser} from "../../contexts/UserContext";
 
 const Form = (props) => {
-    const user = useUser();
 
     const onSubmit = (e) => {
         e.preventDefault();
         if(props.onSubmit){
-            props.onSubmit(e,user);
+            props.onSubmit(e,props.user);
         }
     };
 
     return (
-        <form onSubmit={onSubmit} className={styles.default}>
+        <form onSubmit={onSubmit} className={`${styles.default} ${props.className}`}>
             {props.children}
         </form>
     );

@@ -3,9 +3,7 @@ import {v4 as uuidv4} from 'uuid';
 import styles from "./_switch.module.scss";
 import {useDarkTheme,useDarkThemeToggle} from "../../contexts/DarkThemeContext";
 
-const Switch = ({onChange, classNameForInput, thumbClassName, ...restProps}) => {
-    const darkTheme = useDarkTheme();
-    const setDarkTheme = useDarkThemeToggle();
+const Switch = ({darkTheme, setDarkTheme, onChange, classNameForInput, thumbClassName, ...restProps}) => {
     const [isChecked, setIsChecked] = useState(false);
     const node = useRef();
     const randomId = uuidv4();
