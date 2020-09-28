@@ -2,15 +2,15 @@
 .container {
     @include dimensions(100vw,100vh);
     @include flex(center,column,center);
-    //animation-name: lightAnimation;
-    //animation-duration: 500ms;
+    animation-name: lightAnimation;
+    animation-duration: 500ms;
 }
 .containerDark {
     @extend .container;
-    //animation-name: darkAnimation;
-    //animation-duration: 500ms;
+    animation-name: darkAnimation;
+    animation-duration: 500ms;
     background-color: #222;
-}/*
+}
 @keyframes darkAnimation {
     0% {background-color: white;}
     100% {background-color: #222;}
@@ -18,4 +18,4 @@
 @keyframes lightAnimation {
     0% {background-color: #222;}
     100% {background-color: white;}
-}*/
+}

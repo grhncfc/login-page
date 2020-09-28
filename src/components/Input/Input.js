@@ -2,8 +2,7 @@ import React,{useState} from 'react';
 import styles from "./_input.module.scss";
 
 const Input = ({darkTheme,placeholder,type,children,...restProps}) => {
-    //TODO remove state only control with CSS.
-    let defaultStyle = darkTheme ? styles.defaultDark : styles.default;
+    //TODO remove state only control with CSS.>
 
     const onChange = (e) => {
         if (restProps.onChange){
@@ -12,7 +11,7 @@ const Input = ({darkTheme,placeholder,type,children,...restProps}) => {
     };
 
     return (
-            <input placeholder={placeholder} type={type} {...restProps} onChange={onChange} className={`${defaultStyle} ${restProps.className}`}/>
+            <input placeholder={placeholder} type={type} {...restProps} onChange={onChange} className={`${styles.default} ${restProps.className}`}/>
     );
 };
 

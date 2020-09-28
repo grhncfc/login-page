@@ -1,0 +1,55 @@
+@import "src/utils/styles/mixins";
+.inputStyle {
+  @include flex();
+  position: relative;
+}
+.title{
+  @include dimensions(100%,36px);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.29;
+  letter-spacing: 0.33px;
+  color: #484848;
+  margin-bottom: 32px;
+}
+.titleDark {
+  @extend .title;
+  color: #f2f2f2;
+}
+
+.defaultInputDark {
+  @include colors(#666 !important, beige) ;
+  animation-name: darkAnimation;
+  animation-duration: 500ms;
+
+  &:hover {
+    background-color: #444;
+    border: 2px solid #666;
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &:focus-within {
+    border: 2px solid #ff6000;
+    background-color: #444;
+  }
+
+  &::placeholder {
+    color: #ddd;
+  }
+  &:not(:placeholder-shown) {
+    background-color: #555;
+    border: solid 2px #454545;
+  }
+}
+
+@keyframes darkAnimation {
+  0% {
+    background-color: #eee;
+  }
+  100% {
+    background-color: #666;
+  }
+}

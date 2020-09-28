@@ -4,19 +4,15 @@ import loginImgNonVisible from '../../assets/pwnon-visible.svg';
 import loginImgVisibleDark from '../../assets/pw-visibleDark.svg';
 import loginImgNonVisibleDark from '../../assets/pwnon-visibleDark.svg';
 import styles from "./_visibilityImg.module.scss";
-import {useDarkTheme} from "../../contexts/DarkThemeContext";
 
 //make visibilityImg great again
 
-const VisibilityImg = ({visibility, onClick}) => {
-    const darkTheme = useDarkTheme();
+const VisibilityImg = ({visibility, onClick , darkMode}) => {
 
-    const loginImgDark = visibility ? loginImgVisibleDark : loginImgNonVisibleDark ;
-    const loginImg = visibility ? loginImgVisible : loginImgNonVisible ;
-    const finalImg = darkTheme ? loginImgDark : loginImg;
+    const visibilityImg = darkMode ? (visibility ? loginImgVisibleDark : loginImgNonVisibleDark) : (visibility ? loginImgVisible : loginImgNonVisible ) ;
 
     return (
-        <img className={styles.imgStyle} onClick={onClick} src={finalImg}/>
+        <img className={styles.imgStyle} onClick={onClick} src={visibilityImg}/>
     );
 };
 

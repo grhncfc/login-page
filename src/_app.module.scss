@@ -5,31 +5,26 @@
     padding: 0;
 }
 
-.inputStyle {
-    @include flex();
-    position: relative;
-}
 
 .innerContainer{
     @include flex(center,column,center);
     @include dimensions(277px,439px);
     padding: 72px;
     @include border($border-radius: 8px,$border-color: #e5e5e5);
+    animation-name: lightAnimation;
+    animation-duration: 500ms;
 }
 .innerContainerDark {
     @extend .innerContainer;
     background-color: #1b1b1b;
+    animation-name: darkAnimation;
+    animation-duration: 500ms;
 }
-.title{
-    @include dimensions(100%,36px);
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 1.29;
-    letter-spacing: 0.33px;
-    color: #484848;
-    margin-bottom: 32px;
+@keyframes darkAnimation {
+    0% {background-color: white;}
+    100% {background-color: #1b1b1b;;}
 }
-.titleDark {
-    @extend .title;
-    color: #f2f2f2;
+@keyframes lightAnimation {
+    0% {background-color: #1b1b1b;;}
+    100% {background-color: white;}
 }

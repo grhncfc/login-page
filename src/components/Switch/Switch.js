@@ -4,13 +4,13 @@ import styles from "./_switch.module.scss";
 
 //make switch great again
 
-const Switch = ({darkTheme, setDarkTheme, onChange, classNameForInput, thumbClassName, ...restProps}) => {
+const Switch = ({onChange, classNameForInput, thumbClassName, ...restProps}) => {
     const [isChecked, setIsChecked] = useState(false);
     const node = useRef();
     const randomId = uuidv4();
     useEffect(() => {
         if (onChange) {
-            onChange(node.current, isChecked, darkTheme, setDarkTheme);
+            onChange(node.current, isChecked);
         }
     }, [isChecked]);
 

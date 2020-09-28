@@ -29,44 +29,6 @@
   }
 }
 
-.defaultDark {
-  @extend .default;
-  @include colors(#666, beige);
-  animation-name: darkAnimation;
-  animation-duration: 500ms;
-
-  &:hover {
-    background-color: #444;
-    border: 2px solid #666;
-  }
-
-  &:focus {
-    outline: none !important;
-  }
-
-  &:focus-within {
-    border: 2px solid #ff6000;
-    background-color: #444;
-  }
-
-  &::placeholder {
-    color: #ddd;
-  }
-  &:not(:placeholder-shown) {
-    background-color: #555;
-    border: solid 2px #454545;
-  }
-}
-
-@keyframes darkAnimation {
-  0% {
-    background-color: #eee;
-  }
-  100% {
-    background-color: #666;
-  }
-}
-
 @keyframes lightAnimation {
   0% {
     background-color: #666;
