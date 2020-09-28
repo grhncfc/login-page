@@ -1,30 +1,19 @@
 @import "src/utils/styles/mixins";
+//base class -> innerContainer
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
+//dark, light
 .innerContainer{
     @include flex(center,column,center);
     @include dimensions(277px,439px);
-    padding: 72px;
     @include border($border-radius: 8px,$border-color: #e5e5e5);
-    animation-name: lightAnimation;
-    animation-duration: 500ms;
-}
-.innerContainerDark {
-    @extend .innerContainer;
-    background-color: #1b1b1b;
-    animation-name: darkAnimation;
-    animation-duration: 500ms;
-}
-@keyframes darkAnimation {
-    0% {background-color: white;}
-    100% {background-color: #1b1b1b;;}
-}
-@keyframes lightAnimation {
-    0% {background-color: #1b1b1b;;}
-    100% {background-color: white;}
+    padding: 72px;
+    transition: background-color 0.5s ease;
+
+    &.light {
+        background-color: white;
+    }
+
+    &.dark {
+        background-color: #1b1b1b;
+    }
 }

@@ -18,10 +18,7 @@ const Login = (props) => {
     const [disabledState,setDisabledState] = useState(true);
     const [loading, setLoading] = useState(false);
     const [showError, setShowError] = useState(false);
-    //const authentication = window.localStorage ;
     const setUser = useSetUser();
-
-
 
     const onSubmit = (e) => {
         let id = e.target.id.value;
@@ -62,6 +59,6 @@ const Login = (props) => {
                 </Form>
             </div>
         );
-}
+};
 
 export default Login;

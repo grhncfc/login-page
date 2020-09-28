@@ -1,8 +1,8 @@
-import React,{useState} from 'react';
+import React from 'react';
 import styles from "./_input.module.scss";
 
-const Input = ({darkTheme,placeholder,type,children,...restProps}) => {
-    //TODO remove state only control with CSS.>
+const Input = ({placeholder, type, children, ...restProps}) => {
+    //TODO remove state only control with CSS.
 
     const onChange = (e) => {
         if (restProps.onChange){

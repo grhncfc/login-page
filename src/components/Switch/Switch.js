@@ -8,14 +8,13 @@ const Switch = ({onChange, classNameForInput, thumbClassName, ...restProps}) => 
     const [isChecked, setIsChecked] = useState(false);
     const node = useRef();
     const randomId = uuidv4();
-    useEffect(() => {
-        if (onChange) {
-            onChange(node.current, isChecked);
-        }
-    }, [isChecked]);
+
 
     const onInputChange = (e) => {
         setIsChecked(!isChecked);
+        if (onChange) {
+            onChange(node.current.checked);
+        }
     };
 
     return (
